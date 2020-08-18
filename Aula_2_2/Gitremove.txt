@@ -1,2 +1,0 @@
-Agora estou aprendendo como remover um arquivo GIT
-A vantagem de fazer aqui é que eu sei todas as modificações que ocorreram
