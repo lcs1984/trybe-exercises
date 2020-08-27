@@ -1,0 +1,12 @@
+header.page-header{
+    display: flex;
+    height: 120px;
+    min-width: 120px;
+    align-items: center;
+    color: #fgf;
+    text-shadow: #000 0 0 .2em;
+}
+header.page-header > h1 {
+    font: bold, cursive, fantasy;
+    margin: 2%;
+}
