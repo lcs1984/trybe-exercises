@@ -1,6 +1,6 @@
-let a = 1;
+let a = 0;
 let b = 5;
-let c = 8;
+let c = 7;
 
 let isEven = false;
 

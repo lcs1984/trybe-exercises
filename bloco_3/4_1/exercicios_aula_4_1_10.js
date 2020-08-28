@@ -9,8 +9,8 @@
 
 
 let costProduct = 10;
-let saleValue = 18;
-let tax = (costProduct*0.2)+costProduct;
+let saleValue = 20;
+let tax = (costProduct*1.2)
 
 if (costProduct>0 && saleValue>0){
     let total = ((saleValue-tax)*1000);
