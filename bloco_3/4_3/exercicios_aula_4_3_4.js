@@ -1,6 +1,5 @@
-let n = 9;
+let n = 12;
 let mediana;
-let impressao;
 let simbolo = "*"
 if (n%2===0){
     n = n-1
