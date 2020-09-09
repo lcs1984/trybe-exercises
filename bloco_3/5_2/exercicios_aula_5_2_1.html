@@ -76,38 +76,46 @@
       tagP.innerHTML = "Aprendendo a Trabalhar com DOM";
       document.querySelectorAll(".center-content")[0].appendChild(tagP);
       // Exercício5
-       let divLeftContent = document.createElement("div");
-       divLeftContent.className="left-content";
-       divMainContent.appendChild(divLeftContent);
-       // Exercício6
-       let divRightContent = document.createElement("div");
-       divRightContent.className="right-content";
-       divMainContent.appendChild(divRightContent);
-        // Exercicio7
-        const imagem = document.createElement("img");
-        imagem.src = "https://picsum.photos/200";
-        imagem.className = "small-image";
-        divLeftContent.appendChild(imagem);
-        // Exercicio8
-        let listaNaoOrdenada = document.createElement("ul");
-        listaNaoOrdenada.className = "lista-nao-ordenada";
-        divRightContent.appendChild(listaNaoOrdenada);
-        let listaDeNumeros = ["Um", "Dois", "Tres", "Quatro", "Cinco", "Seis", "Sete", "Oito", "Nove", "Dez"];
-        for (let i = 0; i<10; i += 1){
-            let listaDeItens = document.createElement("li");
-            listaDeItens.innerHTML= listaDeNumeros[i];    
-            listaNaoOrdenada.appendChild(listaDeItens);
-        }
-        //Exercicio9
-        //Poderia ter criado com o nome divMainContent
-        for (let i=0; i<3; i +=1) {
-            let tagH3 = document.createElement("h3");
-           // document.querySelector(".main-content").appendChild(tagH3);
-            divMainContent.appendChild(tagH3);
-
-        }
-
-        
+      let divLeftContent = document.createElement("div");
+      divLeftContent.className = "left-content";
+      divMainContent.appendChild(divLeftContent);
+      // Exercício6
+      let divRightContent = document.createElement("div");
+      divRightContent.className = "right-content";
+      divMainContent.appendChild(divRightContent);
+      // Exercicio7
+      const imagem = document.createElement("img");
+      imagem.src = "https://picsum.photos/200";
+      imagem.className = "small-image";
+      divLeftContent.appendChild(imagem);
+      // Exercicio8
+      let listaNaoOrdenada = document.createElement("ul");
+      listaNaoOrdenada.className = "lista-nao-ordenada";
+      divRightContent.appendChild(listaNaoOrdenada);
+      let listaDeNumeros = [
+        "Um",
+        "Dois",
+        "Tres",
+        "Quatro",
+        "Cinco",
+        "Seis",
+        "Sete",
+        "Oito",
+        "Nove",
+        "Dez",
+      ];
+      for (let i = 0; i < 10; i += 1) {
+        let listaDeItens = document.createElement("li");
+        listaDeItens.innerHTML = listaDeNumeros[i];
+        listaNaoOrdenada.appendChild(listaDeItens);
+      }
+      //Exercicio9
+      //Poderia ter criado com o nome divMainContent
+      for (let i = 0; i < 3; i += 1) {
+        let tagH3 = document.createElement("h3");
+        // document.querySelector(".main-content").appendChild(tagH3);
+        divMainContent.appendChild(tagH3);
+      }
     </script>
   </body>
 </html>
