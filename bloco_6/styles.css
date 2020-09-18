@@ -6,7 +6,7 @@
 
 body {
   background-color: rgb(234, 237, 240);
-  color: rgb(93, 92, 99);
+  color: rgb(206, 203, 223);
   font-family: "Halvetica", "Arial", sans-serif;
   font-size: 16px;
   line-height: 1.3;
@@ -14,7 +14,7 @@ body {
 
 .cabecalho {
   text-align: center;
-  background-color: rgb(246, 247, 248);
+  background-color: rgb(37, 101, 165);
   border: 1px solid rgb(214, 217, 220);
   border-radius: 3px;
   width: 80%;
@@ -25,12 +25,13 @@ body {
 }
 
 .form-do-exercicio {
-  background-color: rgb (246, 247, 248);
+  background-color: rgb(37, 101, 165);
   border: 1px solid rgb(214, 217, 220);
   border-radius: 3px;
   width: 80%;
   padding: 50px;
   margin: 0 auto 40px auto;
+  font-weight: bold;
 }
 
 input[type="text"] {
