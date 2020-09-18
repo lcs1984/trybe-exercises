@@ -28,6 +28,7 @@ let listaDeEstadosDoBrasil = [
   "DF",
 ];
 console.log(listaDeEstadosDoBrasil.length);
+
 let estadosDoBrasil = document.getElementById("estados-do-brasil");
 for (index = 0; index < listaDeEstadosDoBrasil.length; index += 1) {
   let estado = listaDeEstadosDoBrasil[index];
