@@ -23,3 +23,45 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
+
+.form-do-exercicio {
+  background-color: rgb (246, 247, 248);
+  border: 1px solid rgb(214, 217, 220);
+  border-radius: 3px;
+  width: 80%;
+  padding: 50px;
+  margin: 0 auto 40px auto;
+}
+
+input[type="text"] {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb (214, 217, 220);
+  border-radius: 3px;
+  width: 100%;
+  padding: 7px;
+  font-size: 15px;
+}
+
+.campos-pessoais,
+label {
+  margin-bottom: 15px;
+}
+
+.campos-de-trabalho,
+label {
+  margin-bottom: 15px;
+}
+
+textarea {
+  width: 80%;
+  padding: 20px;
+}
+
+.campos-pessoais, .campos-de-trabalho {
+  margin: 20px;
+}
+
+button {
+  padding: 10px;
+  margin: 10px 10px 10px 20px;
+}
