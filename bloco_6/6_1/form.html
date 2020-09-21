@@ -16,7 +16,7 @@
     <form action="" method="GET" class="form-do-exercicio">
       <fieldset class="fieldset-dados-pessoais">
         <legend>Dados Pessoais</legend>
-
+      </br>
         <div class="campos-pessoais">
           <label for="nome-completo">Nome Completo: </label>
           <input
@@ -81,26 +81,31 @@
       </fieldset>
 
       <!--Dados do Último Emprego-->
-      <fieldset class="fieldset-ultimo-emprego"></fieldset>
+      <fieldset class="fieldset-ultimo-emprego">
+    </br>
       <legend>Dados do Último Emprego</legend>
-
+    </br>
       <div class="campos-de-trabalho">
-          <label for="curriculo">Resumo do Currículo</label>
-          <textarea name="curriculo" id="curriculo" maxlength="1000" cols="80" rows="5"></textarea>
+          <label for="curriculo" class="resumo-curriculo" >Resumo do Currículo</label>
+          <textarea name="curriculo"  id="curriculo" maxlength="1000"></textarea>
           <p><em>Descreva seu curriculo em até 1000 caracteres</em></p>
       </div>
       <div class="campos-de-trabalho">
           <label for="cargo">Cargo</label>
           <input type="text" required="required" id="cargo" maxlength="40">
       </div>
-      <div clas="campos-de-trabalho">
+      <div class="campos-de-trabalho">
           <label for="descricao-do-cargo">Descrição do Cargo</label>
           <input type="text" required="required" id="descricao-do-cargo" maxlength="500">
       </div>
-      <div clas="campos-de-trabalho">
+      <div class="campos-de-trabalho">
         <label for="data-de-inicio">Data de Inicio</label>
-        <input type="text" required="required" id="data-de-inicio" required="required">
+        <input type="text" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" placeholder = "dd/mm/yyyy" required="required" id="data-de-inicio">
     </div>
+      <div class="submeter">
+      <button type="submit">Enviar</button>
+      </div>
+    </fieldset>
     </form>
     <script src="script.js"></script>
   </body>
