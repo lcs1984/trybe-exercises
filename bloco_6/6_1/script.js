@@ -35,5 +35,11 @@ for (index = 0; index < listaDeEstadosDoBrasil.length; index += 1) {
   let optionList = document.createElement("option");
   optionList.innerText = estado;
   estadosDoBrasil.appendChild(optionList);
-};
+}
 
+//function verificaFormatoDaData () {
+let data = document.querySelector("#data-de-inicio");
+//data = data.split("/");
+console.log(data.innerText);
+//console.log(data[0]);
+//}
