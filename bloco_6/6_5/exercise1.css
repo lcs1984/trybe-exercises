@@ -1,17 +1,47 @@
+@media screen and (max-width:580px) {
+
 body {
-
+  margin: 1%;
 }
-h1 {
 
+body p {
+    font-size: 1rem;
+}
+
+h1 {
+  font-size: 1.8rem;
 }
 h2 {
-
+  font-size: 1.5rem;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 figure {
-    margin: 0;
+  margin-top: 3%;
+}
+
+.container-figuras {
+  /* display: flex;
+ */
+}
+}
+
+@media screen and (min-width: 581px) {
+body {
+    background-color: blue;
+    margin: 5%;
+}
+
+body p {
+    font-size: 1.2em;
+    max-width: 90%;
+}
+
+.container-figuras {
+    display: flex;
+    flex-wrap: wrap;
+}
 }
