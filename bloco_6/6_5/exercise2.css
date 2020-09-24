@@ -1,6 +1,40 @@
+* {
+    border-top: 0px;
+    box-sizing: border-box;
+    margin: 1%;
+}
 html {
     box-sizing: border-box;
   }
   *, *:before, *:after {
     box-sizing: inherit;
   }
+
+
+  }
+  @media screen and (max-width: 375px) {
+      body {
+          background-color: blue;
+      }
+
+      header p {
+          text-align: center;
+      }
+      .container-nav {
+          display: flex;
+          justify-content: space-around;
+          
+      }
+  }
+
+  @media screen and (max-width: 1027px) and (min-width: 376px) {
+    body {
+        background-color: green;
+    }
+}
+
+@media screen and (min-width: 1028px) {
+    body {
+        background-color:red;
+    }
+}
