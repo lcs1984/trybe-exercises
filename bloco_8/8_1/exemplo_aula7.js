@@ -1,5 +1,5 @@
 const scores = ["D", "A", "C", "B"];
-const numbers = [1, 20, 2, 5]
+const numbers = [1, 20, 2, 5, 20]
 console.log(scores);
 
 scores.sort();
