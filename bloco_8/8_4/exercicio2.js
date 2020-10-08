@@ -2,7 +2,9 @@ const assert = require("assert");
 
 // escreva sum abaixo
 const sum = (...restValues) => {
-  return restValues.reduce((acc, val) => acc + val, 0);
+  return restValues.reduce((acc, val) => {
+    return acc + val;
+  }, 0);
 };
 
 assert.equal(sum(), 0);
