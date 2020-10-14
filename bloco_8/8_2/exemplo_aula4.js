@@ -14,3 +14,5 @@ const fullNames = persons.map(
 );
 
 console.log(fullNames);
+
+// A MAP CRIA UM NOVO ARRAY COM BASE EM UMA FUNÇÃO QUE VOCÊ ESTÁ PASSANDO

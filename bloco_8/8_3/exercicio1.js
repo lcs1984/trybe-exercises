@@ -9,13 +9,13 @@ const arrays = [['1', '2', '3'], [true], [4, 5, 6]];
 //   return previousValue;
 // }, []);
 // }
-function exemplo() {
-  return arrays.reduce((valor1, valor2) => {
-    valor1 + valor2;
-  });
-}
-// Por que dá undefined???
-console.log(exemplo());
+// function exemplo() {
+//   return arrays.reduce((valor1, valor2) => {
+//     valor1 + valor2;
+//   });
+// }
+// // Por que dá undefined???
+// console.log(exemplo());
 
 function flatten() {
   return arrays.reduce((previousValue, nextValue) => {
@@ -26,5 +26,11 @@ function flatten() {
   }, []);
 }
 
+function flatten2() {
+  return arrays.reduce((previousValue2, nextValue2) => {
+    previousValue2.push(nextValue2.map((valor) => valor));
+  }, []);
+}
 // assert.deepEqual(flatten(), ["1", "2", "3", true, 4, 5, 6]);
 console.log(flatten());
+console.log(flatten2());
