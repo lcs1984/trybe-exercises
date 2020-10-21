@@ -5,13 +5,12 @@ const delay = (maxMilliseconds = 5000) => Math.floor(Math.random() * maxMillisec
 
 const getUser = callback => {
   setTimeout(() => {
-    const user = {
+    const user = callback({
       firstName: "Ivan",
       lastName: "Ivanovich",
       nationality: "Russian"
-    };
+    });
     console.log(user);
-    callback(user);
   }, delay());
 };
 
