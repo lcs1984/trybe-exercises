@@ -12,3 +12,4 @@ function verifiedFetch(url) {
   });
 }
 
+verifiedFetch('https://api.chucknorris.io/jokes/random?category=dev');
