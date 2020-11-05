@@ -21,6 +21,7 @@ const Animals = [
     findAnimalsByType(type).then(list => list)
   );
   
+  //Mesmo sendo uma função assíncrona, com o return não preciso de async await, mas deveria ussar o done()
   describe('Quando o tipo do animal existe', () => {
     test('Retorne a lista de animais', () => {
       expect.assertions(2);
