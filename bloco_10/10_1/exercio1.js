@@ -41,6 +41,6 @@ function encode(stringDecodifique) {
     return novaString;
   }
 
-  console.log(encode('a'))
+  console.log(encode('b'))
 
   module.exports = {encode, decode};
