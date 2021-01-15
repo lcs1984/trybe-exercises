@@ -10,8 +10,8 @@ class App extends React.Component {
     }
   }
 
-  handleChange() {
-    console.log('xablau');
+  handleChange(event) {
+    console.log(event.target.value);
 
   }
 
