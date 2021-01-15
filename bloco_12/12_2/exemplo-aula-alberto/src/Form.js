@@ -1,4 +1,5 @@
 import React from "react";
+import EstadoFavorito from './EstadoFavorito';
 
 class Form extends React.Component {
   constructor() {
@@ -17,6 +18,7 @@ class Form extends React.Component {
   }
 
   handleChange({ target }) {
+    console.log("estou mudando o estado do pai");
     const { name } = target;
     const value = target.type === "checkbox" ? target.checked : target.value;
     this.setState({ [name]: value });
@@ -27,13 +29,7 @@ class Form extends React.Component {
       <div>
         <h1>Estados e React</h1>
         <form className="form">
-          <label>
-            <textarea
-              name="estadoFavorito"
-              value={this.state.estadoFavorito}
-              onChange={this.handleChange}
-            />
-          </label>
+        <EstadoFavorito value={this.state.estadoFavorito} handleChange={this.handleChange}/>
           <label>
             <input
               type="email"
