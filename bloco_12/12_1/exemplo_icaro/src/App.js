@@ -9,7 +9,7 @@ class App extends React.Component {
       <ul>
         {colors.map((color, index) => (
           <li key={index}>
-            <div className={color.color=== 'red' ? 'red-square' : 'default'}></div>
+            <div className={color.color=== 'red' ? 'red-square' : 'color-square'}></div>
             {color.color}
           </li>
         ))}
