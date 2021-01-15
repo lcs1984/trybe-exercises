@@ -8,8 +8,8 @@ class App extends React.Component {
     return (
       <ul>
         {colors.map((color, index) => (
-          <li key={index}>
-            <div className={color.color=== 'red' ? 'red-square' : 'color-square'}></div>
+          <li key={color.value}>
+            <div className="color-square" style = {{backgroundColor: color.value}}></div>
             {color.color}
           </li>
         ))}
