@@ -8,11 +8,13 @@ class App extends React.Component {
     this.state = {
       inputTextValue: ''
     }
+    this.handleChange=this.handleChange.bind(this);
   }
 
   handleChange(event) {
-    console.log(event.target.value);
-
+    // console.log(event.target.value);
+    // console.log("clicou");
+    this.setState({inputTextValue: event.target.value})
   }
 
   render() {
