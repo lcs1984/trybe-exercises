@@ -25,7 +25,7 @@ class App extends React.Component {
       <main>
         <input type="text" onChange={this.handleChange}/>
         <ul>
-          {colors.filter((color)=>color.color===inputTextValue).map((color, index) => (
+          {colors.filter((color)=>color.color.includes(inputTextValue)).map((color, index) => (
             <li key={index}>
               <div className="color-square" style = {{backgroundColor: color.value}}></div>
                 {color.color}
