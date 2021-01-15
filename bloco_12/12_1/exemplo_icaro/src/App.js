@@ -3,17 +3,33 @@ import "./App.css";
 import colors from "./data";
 
 class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      inputTextValue: ''
+    }
+  }
+
+  handleChange() {
+    console.log('xablau');
+
+  }
+
   render() {
-    console.log(colors);
+    // console.log(colors);
+    console.log(this);
     return (
-      <ul>
-        {colors.map((color, index) => (
-          <li key={color.value}>
-            <div className="color-square" style = {{backgroundColor: color.value}}></div>
-            {color.color}
-          </li>
+      <main>
+        <input type="text" onChange={this.handleChange}/>
+        <ul>
+          {colors.map((color, index) => (
+            <li key={index}>
+              <div className="color-square" style = {{backgroundColor: color.value}}></div>
+                {color.color}
+            </li>
         ))}
-      </ul>
+        </ul>
+      </main>
     );
   }
 }
