@@ -7,7 +7,7 @@ class App extends React.Component {
     console.log(colors)
     return (
       <ul>
-        <li>{colors[0].color}</li>
+        {colors.map((color, index) => <li key={index}>{color.color}</li>)}
       </ul>
     )
   }
