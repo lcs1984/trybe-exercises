@@ -17,7 +17,8 @@ class Form extends React.Component {
   }
 
   handleChange({ target }) {
-    const { name, value } = target;
+    const { name } = target;
+    const value = target.type === "checkbox" ? target.checked : target.value;
     this.setState({ [name]: value });
     // console.log(target.name);
   }
@@ -38,6 +39,14 @@ class Form extends React.Component {
               type="email"
               name="email"
               value={this.state.email}
+              onChange={this.handleChange}
+            />
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="vaiComparecer"
+              value={this.state.vaiComparecer}
               onChange={this.handleChange}
             />
           </label>
