@@ -15,13 +15,18 @@ class App extends React.Component {
   }
 
   async fetchJoke() {
-    const requestHeaders = {headers: { Accept: 'application/json'}}
-    const requestReturn = await fetch('https://icanhazdadjoke.com/', requestHeaders)
-    const resquestObject = await requestReturn.json()
-    this.setState({
-      jokeObj: resquestObject
-    })
-  }
+    this.setState(
+      {loading: true},
+      async() => {
+        const requestHeaders = {headers: { Accept: 'application/json'}}
+        const requestReturn = await fetch('https://icanhazdadjoke.com/', requestHeaders)
+        const resquestObject = await requestReturn.json()
+        this.setState({
+          loading: false,
+          jokeObj: resquestObject
+        })
+      })
+    }
 
   componentDidMount(){
     // Sequencia-> constructor, render e did mount
@@ -30,6 +35,9 @@ class App extends React.Component {
   }
 
   saveJoke() {
+    this.setState(({storedJokes, jokeObj}) => ({
+      storedJokes: [...storedJokes, jokeObj]
+    }))
     this.fetchJoke();
   }
 
@@ -45,15 +53,15 @@ class App extends React.Component {
   }
 
   render() {
-    const {storedJokes, jokeObj} = this.state;
+    const {storedJokes, loading} = this.state;
     const loadingElement = <span>Loading...</span>
-
+    console.log('rederizou');
     return(
       <div>
         <span>
           {storedJokes.map(({id, joke}) => (<p key={id}>{joke}</p>))}
         </span>
-        <p>{jokeObj ? this.renderJokeElement() : loadingElement}</p>
+        <p>{loading ? loadingElement : this.renderJokeElement()}</p>
       </div>
     )
   }
