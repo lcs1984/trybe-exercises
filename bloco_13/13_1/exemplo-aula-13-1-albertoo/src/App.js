@@ -24,6 +24,8 @@ class App extends React.Component {
   }
 
   componentDidMount(){
+    // Sequencia-> constructor, render e did mount
+    // Entao a primeira vez ele rendenriza sem chamar a função 
     this.fetchJoke();
   }
 
@@ -51,7 +53,7 @@ class App extends React.Component {
         <span>
           {storedJokes.map(({id, joke}) => (<p key={id}>{joke}</p>))}
         </span>
-        <p>{jokeObj ? jokeObj.joke : loadingElement}</p>
+        <p>{jokeObj ? this.renderJokeElement() : loadingElement}</p>
       </div>
     )
   }
