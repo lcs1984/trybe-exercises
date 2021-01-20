@@ -1,0 +1,13 @@
+.color-square {
+  width: 15px;
+  height: 15px;
+  background-color: #000;
+  display: inline-block;
+}
+
+.red-square {
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  display: inline-block;
+}
