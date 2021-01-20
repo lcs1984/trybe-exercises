@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio Aula 6.1</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="cabecalho">
+      <h1>Exercicios Aula 6.1</h1>
+      <p><em>HTML e CCS - Forms</em></p>
+    </header>
+    <!--Formulário-->
+    <!--Dados Pessoais-->
+    <form action="" method="GET" class="form-do-exercicio">
+      <fieldset class="fieldset-dados-pessoais">
+        <legend>Dados Pessoais</legend>
+
+        <div class="campos-pessoais">
+          <label for="nome-completo">Nome Completo: </label>
+          <input
+            name="name"
+            type="text"
+            id="nome-completo"
+            maxlength="40"
+            required="required"
+          />
+        </div>
+        <div class="campos-pessoais">
+          <label for="e-mail">E-mail: </label>
+          <input
+            name="name"
+            type="text"
+            id="e-mail"
+            maxlength="50"
+            required="required"
+          />
+        </div>
+        <div class="campos-pessoais">
+          <label for="cpf">CPF: </label>
+          <input
+            name="name"
+            type="text"
+            id="cpf"
+            maxlength="11"
+            required="required"
+          />
+        </div>
+        <div class="campos-pessoais">
+          <label for="endereco">Endereço: </label>
+          <input
+            name="name"
+            type="text"
+            id="endereco"
+            maxlength="200"
+            required="required"
+          />
+        </div>
+        <div class="campos-pessoais">
+          <label for="cidade">Cidade: </label>
+          <input
+            name="name"
+            type="text"
+            id="cidade"
+            maxlength="28"
+            required="required"
+          />
+        </div>
+        <div class="campos-pessoais">
+          <label for="estados-do-brasil">Estado: </label>
+          <select name="estados-do-brasil" id="estados-do-brasil"></select>
+        </div>
+        <div class="campos-pessoais">
+          <legend>Tipo de Moradia:</legend>
+          <input type="radio" name="casa-apto" value="1" id="casa" />
+          <label for="casa">Casa</label>
+          <input type="radio" name="casa-apto" value="2" id="apartamento" />
+          <label for="apto">Apartamento</label>
+        </div>
+      </fieldset>
+
+      <!--Dados do Último Emprego-->
+      <fieldset class="fieldset-ultimo-emprego"></fieldset>
+      <legend>Dados do Último Emprego</legend>
+
+      <div class="campos-de-trabalho">
+          <label for="curriculo">Resumo do Currículo</label>
+          <textarea name="curriculo" id="curriculo" maxlength="1000"></textarea>
+          <p><em>Descreva seu curriculo em até 1000 caracteres</em></p>
+      </div>
+      <div class="campos-de-trabalho">
+          <label for="cargo">Cargo</label>
+          <input type="text" required="required" id="cargo" maxlength="40">
+      </div>
+      <div clas="campos-de-trabalho">
+          <label for="descricao-do-cargo">Descrição do Cargo</label>
+          <input type="text" required="required" id="descricao-do-cargo" maxlength="500">
+      </div>
+      <div clas="campos-de-trabalho">
+        <label for="data-de-inicio">Data de Inicio</label>
+        <input type="text" required="required" id="data-de-inicio" required="required">
+    </div>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>

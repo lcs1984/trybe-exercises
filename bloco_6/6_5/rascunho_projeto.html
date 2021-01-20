@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="top-bar">
+      <!-- css .top-bar {
+            display: flex;
+            background-color: rgb(66,103,178);
+        } -->
+      <div class="container-logo">
+        <img src="imgs/facebook-logo.png" class="facebook-logo" />
+      </div>
+      <!-- css .facebook-logo {
+           alinhado à esquerda dentro da barra azul
+           display: flex
+      } -->
+        <form action="" method="GET" class="facebook-login">
+          <!-- css .facebook-login {
+                alinhado à direita dentro da barra azul;
+                display: flex;
+            } -->
+            <!-- css .form-group {
+                display: flex;
+                flex-direction: column;
+            } -->
+            <div class="form-group">
+                <label for="user-email-phone-label">Email ou telefone</label>
+                <input type="text" id="user-email-phone-label" required>
+            </div>
+            <div clas="form-group">
+                <label for="user-password-label">Senha</label>
+                <input type="password" id="user-password-label" required>
+            </div>
+            <div class="form-control">
+                <!-- css .form-control {
+                    align-self: flex-end;
+                } -->
+                    <button type="submit" id="button-login">Entrar</button> 
+                <!-- css #button-login {
+                    alinhado à direita do campo de entrada de Senha
+                } -->
+                <!-- javascript #button-login event click alert com valor do campo E-mail ou Telefone -->
+            </div>
+        </form>
+        <p>Esqueceu a senha?</p>
+    </header>
+    <main class="main-content">
+        <!-- abaixo da barra azul
+        css .main-content {
+            display: flex;
+            flex-direction: row; eixo horizontal  
+        } -->
+        <div class="left-content">
+            <p id="facebook-slogan">O Facebook ajuda você a se conectar e compartilhar com as pessoas que fazem parte da sua vida.</p>
+            <img id="facebook-networking" src="imgs/networking.png">
+            <!-- css .left-content {
+                width: 800px;
+            } -->
+        <div class="right-content">
+            <h1>Abra uma conta</h1>
+            <spam class="quick-easy">É rápido e fácil</spam>
+            <!-- css .right-content {
+                width: 300px;
+                justify-content: colocar a forma que melhor alinhar os conteúdos:
+                deve estar à direita do elemento left content;
+            } -->
+        </div>
+        </div>
+    </main>
+
+  </body>
+</html>

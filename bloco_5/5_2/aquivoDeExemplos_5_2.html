@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="paiDoPai">
+      <div id="pai">
+        <div id="primeiroFilho"></div>
+        <div id="elementoOndeVoceEsta">
+          <div id="primeiroFilhoDoFilho"></div>
+          <div id="segundoEUltimoFilhoDoFilho"></div>
+        </div>
+        Atenção!
+        <div id="terceiroFilho"></div>
+        <div id="quartoEUltimoFilho"></div>
+      </div>
+    </div>
+    <script>
+      document.querySelector("#pai").parentNode;
+      document.querySelector("#pai").childNodes;
+      document.querySelector("#pai").firstChild;
+      document.querySelector("#pai").lastChild;
+      document.querySelector("#pai").nextSibling;
+      document.querySelector("#pai").previousSibling;
+      document.querySelector("#pai").nextElementSibling;
+      document.querySelector("#pai").previousElementSibling;
+      //Até aqui só testando comandos...
+      document.querySelector("#elementoOndeVoceEsta").parentNode.style.color =
+        "green";
+      document.querySelector("#primeiroFilhoDoFilho").innerHTML = "<p>Olá</p>";
+      document.querySelector("#pai").firstChild;
+      document.querySelector("#elementoOndeVoceEsta").parentNode;
+      document.querySelector("#elementoOndeVoceEsta").nextSibling;
+      // terceiro filho a parti do elemento onde você está
+      document.querySelector("#elementoOndeVoceEsta").nextElementSibling;
+      //terceiro filho a partir de pai...Acho que não está indo
+      document.querySelector("#pai").childNodes.childNodes;
+      // Parte II
+      //Crie um irmão para elementoOndeVoceEsta.
+      let elementoIrmao = document.createElement("div");
+      elementoIrmao.className = "elemento-irmao";
+      elementoIrmao.innerHTML = "<br>Vqv!";
+      document.querySelectorAll("#pai")[0].appendChild(elementoIrmao);
+      //Crie um filho para elementoOndeVoceEsta.
+      let elementoFilhoOndeVoceEsta = document.createElement("div");
+      elementoFilhoOndeVoceEsta.id = "Elemento-filho-onde-voce-esta";
+      elementoFilhoOndeVoceEsta.innerHTML = "filho de onde voce esta";
+      document
+        .querySelector("#elementoOndeVoceEsta")
+        .appendChild(elementoFilhoOndeVoceEsta);
+      //Crie um filho para primeiroFilhoDoFilho.
+      let filhoParaPrimeiroFilhoDoFilho = document.createElement("p");
+      filhoParaPrimeiroFilhoDoFilho.className = "classe-para-primeiro-filho-do-filho"
+      filhoParaPrimeiroFilhoDoFilho.innerHTML =
+        "Filho para o primeiro filho do filho";
+      document
+        .querySelector("#primeiroFilhoDoFilho")
+        .appendChild(filhoParaPrimeiroFilhoDoFilho);
+      //A partir desse filho criado, acesse terceiroFilho
+      let filhoPartindoDoTerceiroFilho = document.createElement("div");
+      filhoPartindoDoTerceiroFilho.innerHTML="Filho partindo do terceiro filho";
+      document.querySelector(".classe-para-primeiro-filho-do-filho").appendChild(filhoPartindoDoTerceiroFilho);
+      document.que
+    </script>
+  </body>
+</html>
