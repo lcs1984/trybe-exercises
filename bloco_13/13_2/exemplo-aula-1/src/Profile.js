@@ -1,8 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Profile extends React.Component {
     render() {
-        return(<h1>Meu Perfil: Amir Klink</h1>)
+        return(
+        <div>
+            <Link to="/">Voltar à Home</Link>
+            <h1>Meu Perfil: {this.props.name}</h1>
+        </div>
+        )
     }
 }
 
