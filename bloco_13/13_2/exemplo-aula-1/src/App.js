@@ -11,7 +11,7 @@ class App extends React.Component {
     <BrowserRouter>
       <Route path="/about" component={About}/>
       <Route path="/howto" component={HowTo}/>
-      <Route path="/profile/:pessoa" render={(props) => <Profile {...props} name="Leonardo Sardinha DEV"/>}/>
+      <Route path="/profile/:person" render={(props) => <Profile {...props} name="Leonardo Sardinha DEV"/>}/>
       <Route exact path="/" component={Home}/>
     </BrowserRouter>
     );
