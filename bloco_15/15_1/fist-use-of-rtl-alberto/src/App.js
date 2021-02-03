@@ -1,5 +1,7 @@
 import React from 'react';
 
+// Ajustando no Githubaa
+
 class App extends React.Component {
   constructor() {
     super();
