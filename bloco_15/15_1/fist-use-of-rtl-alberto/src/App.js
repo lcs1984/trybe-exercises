@@ -1,4 +1,5 @@
 import React from 'react';
+import ValidEmail from './ValidEmail';
 
 // Ajustando no Githubaa
 
@@ -41,7 +42,7 @@ class App extends React.Component {
             <input data-testid="id-email" type="email" id="id-email" name="email" value={ email } onChange={this.changeEmail}/>
             <button data-testid="id-send" type="button" id="btn-send" value="Enviar" onClick={ () => this.saveEmail(email) }>Enviar</button>
             <button type="button" onClick={ this.sendEmail }>Voltar</button>
-            <h2 data-testid="id-email-user">{`Valor: ${savedEmail}`}</h2>
+            <ValidEmail email={ savedEmail }/>
         </form>  
       </div>
     )
