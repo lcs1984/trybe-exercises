@@ -35,13 +35,13 @@ class App extends React.Component {
   render() {
     const { email, savedEmail } = this.state;
     return(
-      <div>Leo
+      <div className="App">Leo
         <form>
-          <label htmlFor="email">Email:</label>
-            <input data-testid="id-email" type="email" id="email" name="email" value={ email } onChange={this.changeEmail}/>
-            <button data-testid="id-send" type="button" value="Enviar" onClick={ () => this.saveEmail(email) }>Enviar</button>
+          <label htmlFor="id-email">Email:</label>
+            <input data-testid="id-email" type="email" id="id-email" name="email" value={ email } onChange={this.changeEmail}/>
+            <button data-testid="id-send" type="button" id="btn-send" value="Enviar" onClick={ () => this.saveEmail(email) }>Enviar</button>
             <button type="button" onClick={ this.sendEmail }>Voltar</button>
-            <h2>{`Valor: ${savedEmail}`}</h2>
+            <h2 data-testid="id-email-user">{`Valor: ${savedEmail}`}</h2>
         </form>  
       </div>
     )
