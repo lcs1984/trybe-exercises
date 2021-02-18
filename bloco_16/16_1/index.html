@@ -12,17 +12,20 @@
         Clicked: <span id="value">0</span>
         <button id="increment">+</button>
         <button id="decrement">-</button>
-        <button id="increment-10">-</button>
+        <button id="increment-10">+10</button>
     </div>
     <script>
         const INCREMENT = 'INCREMENT';
         const DECREMENT = 'DECREMENT';
-        const counterReducer = (state =0, action) => {
+        const counterReducer = (state = {clicks: 0, likes: 0}, action) => {
             switch(action.type) {
                 case INCREMENT:
-                    return state + action.payload.action;
+                    return {
+                        ...state, 
+                        clicks: state.clicks + action.payload.amount};
                 case DECREMENT:
-                    return state - action.payload.action;
+                    return {...state, 
+                        clicks: state.clicks - action.payload.amount};
                 default:
                     return state;
             }
@@ -46,7 +49,39 @@
             }
         };
 
-        const store = Redux.createStore(counterReducer);
+        const incBy10 = () => {
+            return {
+                type: 'INCREMENT',
+                payload: {
+                    amount: 10,
+                }
+            }
+        };
+
+        const buttonIncrement = document.getElementById('increment');
+        const buttonDecrement = document.getElementById('decrement');
+        const buttonIncrementBy10 = document.getElementById('increment-10');
+        const valueReturn = document.getElementById("value");
+
+        buttonIncrement.addEventListener('click', () => {
+            console.log('clicou');
+            store.dispatch(incAction());
+        });
+        buttonDecrement.addEventListener('click', () => {
+            store.dispatch(decAction());
+        });
+
+        buttonIncrementBy10.addEventListener('click', () => {
+            store.dispatch(incBy10());
+        });
+
+
+        const store = Redux.createStore(counterReducer,
+        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+        );
+        store.subscribe(() => {
+            valueReturn.innerHTML = store.getState().clicks;
+        })
     </script>
 </body>
 </html>
