@@ -1,3 +1,4 @@
-const ADD_DATA_TO_FORM = 'ADD_DATA_TO_FORM';
+const ADD_NAME = 'ADD_NAME'
+const ADD_EMAIL = 'ADD_EMAIL'
 
-export default ADD_DATA_TO_FORM;
+export { ADD_NAME, ADD_EMAIL }
