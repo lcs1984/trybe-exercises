@@ -1,6 +1,6 @@
-import React from 'react'
-import { Provider } from 'react-redux'
-import { render, cleanup } from '@testing-library/react';
+import React from 'react';
+import { Provider } from 'react-redux';
+import { render, cleanup, fireEvent } from '@testing-library/react';
 import App from './App';
 // demais imports...
 import { createStore, combineReducers } from 'redux';
@@ -8,13 +8,16 @@ import clickReducer from './reducers';
 
 const renderWithRedux = (
   component,
-  { initialState, store = createStore(combineReducers({ clickReducer }), initialState) } = {}
+  {
+    initialState,
+    store = createStore(combineReducers({ clickReducer }), initialState),
+  } = {}
 ) => {
   return {
     ...render(<Provider store={store}>{component}</Provider>),
     store,
-  }
-}
+  };
+};
 
 describe('testing clicks', () => {
   beforeEach(cleanup);
@@ -24,11 +27,16 @@ describe('testing clicks', () => {
 
     expect(buttonAdicionar).toBeInTheDocument();
     expect(queryByText('0')).toBeInTheDocument();
+    fireEvent.click(buttonAdicionar);
+    expect(queryByText('1')).toBeInTheDocument();
   });
-});
-
-test('a click in a button should increment the value of clicks', () => {
-  const { queryByText } = renderWithRedux(<App />, { initialState: { clickReducer: { counter: 5 }}});
-
-  expect(queryByText('5')).toBeInTheDocument();
+  test('if starts with number 5 and increase by one on click', () => {
+    const { queryByText } = renderWithRedux(<App />, {
+      initialState: { clickReducer: { counter: 5 } },
+    });
+    expect(queryByText('5')).toBeInTheDocument();
+    const buttonAdicionar = queryByText('Clique aqui');
+    fireEvent.click(buttonAdicionar);
+    expect(queryByText('6')).toBeInTheDocument();
+  });
 });
