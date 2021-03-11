@@ -1,5 +1,3 @@
-import React from "react";
-
 // class TodoList extends React.Component {
 //   render() {
 //     const { todos } = this.props;
@@ -15,12 +13,14 @@ import React from "react";
 
 // Os componentes funcionais recebem como parâmetro as props
 
-function TodoList({ todos }) {
+import React, { useContext } from "react";
+import TodoContext from "../context/TodoContext";
+
+function TodoList() {
+  const { todos } = useContext(TodoContext);
   return (
     <ul>
-      {todos.map((todo) => (
-        <li>{todo}</li>
-      ))}
+      {todos.map((todo, index) => <li key={index}>{todo}</li>)}
     </ul>
   );
 }
