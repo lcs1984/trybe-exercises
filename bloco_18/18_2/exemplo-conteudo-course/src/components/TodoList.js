@@ -1,16 +1,28 @@
 import React from "react";
 
-class TodoList extends React.Component {
-  render() {
-    const { todos } = this.props;
-    return (
-      <ul>
-        {todos.map((todo) => (
-          <li>{todo}</li>
-        ))}
-      </ul>
-    );
-  }
+// class TodoList extends React.Component {
+//   render() {
+//     const { todos } = this.props;
+//     return (
+//       <ul>
+//         {todos.map((todo) => (
+//           <li>{todo}</li>
+//         ))}
+//       </ul>
+//     );
+//   }
+// }
+
+// Os componentes funcionais recebem como parâmetro as props
+
+function TodoList({ todos }) {
+  return (
+    <ul>
+      {todos.map((todo) => (
+        <li>{todo}</li>
+      ))}
+    </ul>
+  );
 }
 
 export default TodoList;
