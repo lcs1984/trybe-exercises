@@ -8,6 +8,8 @@
 -- ORDER BY total_film DESC
 -- LIMIT 10;
 
+-- 1
+
 USE sakila;
 DELIMITER $$
 CREATE PROCEDURE MostrarOsDezAtoresMaisPopulares()
