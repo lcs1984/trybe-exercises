@@ -2,25 +2,48 @@
 db.bios.find({_id: 5})
 2
 db.bios.find({_id: 8}, {"_id": 1, "name":1})
-
 3
-
-
+db.bios.find({_id: 8}, {"name":1, "birth" : 1})
 4
-
-
+db.bios.find({ "name.first": "John" }).pretty()
 5
-
+db.bios.find().limit(3).pretty()
 
 6
-
+db.bios.find().skip(5).limit(2)
 
 7
+1) salvei o arquivos books.json 
+2) saio do mongo e digito o comando abaixo para importar o arquivo
+3) mongoimport --db class --collection books --file books.json
+4) entro no mongo, digitando : mongo
+*** OBS: o arquivo chama class
+5) comandos:
+use class
+show collections
+db.books.find()
+db.books.count()
 
 
 8
+db.books.count({ status: "PUBLISH" })
+db.books.find({"status": "PUBLISH"}).count()
 
 9
-
+db.books.find({},{"title": 1, "isbn":1, "pagecount": 1, "_id":0}).limit(3)
 
 10
+db.books.find(
+    {
+        status: "MEAP"
+    },
+    {
+        title: 1,
+        authors: 1,
+        status: 1
+    }
+).skip(5).limit(10).pretty()
+
+db.books.find({"status": "MEAP"}, {"_id": 1, "title": 1, "authors":1}).skip(5).limit(10).pretty()
+
+
