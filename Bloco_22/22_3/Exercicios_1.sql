@@ -3,7 +3,7 @@ SELECT * FROM sakila.film_category;
 SELECT * FROM sakila.film;
 
 USE sakila;
-CREATE VIEW view_exercicio_1 AS
+CREATE VIEW film_with_categories AS
 SELECT f.title, fc.category_id, c.name
 FROM sakila.film AS f
 INNER JOIN sakila.film_category AS fc
@@ -11,3 +11,5 @@ ON f.film_id = fc.film_id
 INNER JOIN sakila.category AS c
 ON fc.category_id = c.category_id
 ORDER BY f.title;
+
+-- DROP VIEW view_exercicio_1;
