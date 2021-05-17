@@ -1,0 +1,16 @@
+{
+  "name": "carro_de_corrida",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "index.js",
+    "velocidade": "node velocidade.js"
+  },
+  "author": "Leonardo Sardinha",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
