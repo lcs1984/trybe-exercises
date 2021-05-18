@@ -1,0 +1,2 @@
+db.movies.updateOne({title: "Godzilla"},{$max:{imdbRating: 8.6}});
+
