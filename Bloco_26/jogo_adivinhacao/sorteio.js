@@ -28,3 +28,5 @@ function jogar() {
       jogar();
   }
 }
+
+jogar();
