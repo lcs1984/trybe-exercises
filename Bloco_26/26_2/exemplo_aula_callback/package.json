@@ -1,0 +1,14 @@
+{
+  "name": "exemplo_aula_callback",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "readfile1": "node readfile1.js",
+    "readfile2": "node readfile2.js",
+    "readfile3": "node readfile3.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
