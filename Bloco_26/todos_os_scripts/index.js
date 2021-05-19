@@ -7,15 +7,24 @@ const scripts = [
   { name: 'Calcular velocidade média', script: './velocidade.js' },
   { name: 'Jogo de adivinhação', script: './sorteio.js' },
 ];
-
+// console.log(scripts);
 // Iteramos sobre os scripts para criar a lista numerada
-const mensagem = scripts
-  .map((script, index) => `${index + 1} - ${script.name}`)
+let mensagem = scripts
+  .map((script, index) => `${index + 1} - ${script.name}`);
   // Adicionamos uma linha a mais no começo da mensagem
-  .unshift('Escolha um número para executar o script correspondente')
-  .join('\n');
-
-const scriptNumber = readline.questionInt(mensagem) - 1;
+  // console.log(mensagem)
+  mensagem.unshift('Escolha um número para executar o script correspondente');
+  // console.log(mensagem)
+  // console.log("oi ", mensagem);
+  // console.log([
+  //   'Escolha um número para executar o script correspondente',
+  //   '1 - Calcular IMC',
+  //   '2 - Calcular velocidade média',
+  //   '3 - Jogo de adivinhação'
+ let newMessage = mensagem.join('\n');
+  // console.log(nm)
+  
+const scriptNumber = readline.questionInt(newMessage) - 1;
 
 const script = scripts[scriptNumber];
 
@@ -25,3 +34,4 @@ if (!script) return console.log('Número inválido. Saindo');
 // Note que, no dia a dia, é mais comum utilizarmos outras formas de executar arquivos externos
 // No entanto, para fins didáticos, o `require` nos atende por enquanto.
 require(script.script);
+// require('./velocidade.js')
