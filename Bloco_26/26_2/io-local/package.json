@@ -1,0 +1,20 @@
+{
+  "name": "io-local",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node readFileSync.js",
+    "readfilesync": "node readFileSync.js",
+    "readfile": "node readFile.js",
+    "readfilepromise": "node readFilePromise.js",
+    "writefile": "node writeFile.js",
+    "writefilepromise": "node writeFilePromise.js",
+    "writefilepromiseflag": "node writeFilePromiseFlag.js",
+    "promiseall": "node promiseAll.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
