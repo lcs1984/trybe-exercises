@@ -20,3 +20,5 @@ function tree_numbers(a, b, c) {
       const arrayType = await arrayOfNumbers.map((number) => typeof number);
       
   }
+
+  

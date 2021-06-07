@@ -21,3 +21,4 @@ readFilePromise("./file1.txt").then((result) => {
 }).catch((err)=> {
     console.log(`Erro encontrado: ${err.messagae}`)
 })
+
